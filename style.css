@@ -1,1 +1,76 @@
-/* Add you CSS here */
+/* These variables make the main colors easy to change. */
+:root {
+	--ink: #17211d;
+	--paper: #f4f0e8;
+	--cream: #fbfaf6;
+	--green: #28483b;
+	--yellow: #e8c45c;
+	--muted: #6f756f;
+}
+
+/* This reset keeps spacing predictable for beginners. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: Georgia, 'Times New Roman', serif; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.site-header { align-items: center; background: var(--paper); display: flex; justify-content: flex-end; padding: 24px 7%; }
+.logo { font-family: Arial, sans-serif; font-size: 1.4rem; font-weight: bold; letter-spacing: 1px; }
+.logo span, h2 span, .email span { color: var(--green); }
+nav a { font-family: Arial, sans-serif; font-size: .72rem; font-weight: bold; letter-spacing: 1px; margin-left: 25px; text-transform: uppercase; }
+nav a:hover, .text-link:hover { color: var(--green); }
+
+.eyebrow, .section-label { font-family: Arial, sans-serif; font-size: .7rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+.eyebrow { color: var(--yellow); }
+
+.section { padding: 105px 12%; }
+.section-label { color: var(--green); margin-bottom: 55px; }
+.top-profile { background: var(--paper); padding: 80px 12% 90px; text-align: center; }
+.top-profile .eyebrow { color: var(--green); }
+.top-profile .small-name { font-size: clamp(2.5rem, 5vw, 4.5rem); margin: 0 0 12px; }
+.top-profile .eyebrow { margin: 0 0 25px; }
+.about { background: var(--cream); }
+.about-content, .skills-content, .footer-content { align-items: center; display: flex; justify-content: space-between; }
+.profile-placeholder { align-items: center; background: var(--green); border: 10px solid var(--yellow); border-radius: 50%; color: var(--cream); display: flex; font: bold 3rem Arial, sans-serif; height: 230px; justify-content: center; margin: 0 auto; width: 230px; }
+.about-copy { margin: 0 auto; max-width: 610px; }
+.about-copy h2 { font-size: clamp(2rem, 4vw, 3.2rem); text-align: center; }
+h1 { font-size: clamp(3.6rem, 8vw, 7.2rem); font-weight: normal; line-height: .92; margin: 25px 0; }
+h1 em { color: var(--green); font-style: italic; }
+h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: normal; line-height: 1; margin: 0 0 28px; }
+h2 span { font-style: italic; }
+.about p { color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin-left: auto; margin-right: auto; max-width: 490px; text-align: center; }
+.text-link { border-bottom: 1px solid var(--green); display: inline-block; font-family: Arial, sans-serif; font-size: .72rem; font-weight: bold; letter-spacing: 1px; margin-top: 14px; padding-bottom: 8px; text-transform: uppercase; }
+.text-link span { font-size: 1rem; margin-left: 20px; }
+.linkedin-logo { align-items: center; background: var(--green); border-radius: 4px; color: var(--cream); display: flex; font-family: Arial, sans-serif; font-size: 1.5rem; font-weight: bold; height: 48px; justify-content: center; margin-top: 20px; width: 48px; }
+.linkedin-logo:hover { background: var(--ink); }
+
+.skills { background: var(--yellow); }
+.skills-content { align-items: flex-start; }
+.skill-list { width: 53%; }
+.skill { border-bottom: 1px solid rgba(23, 33, 29, .35); padding: 18px 0; }
+.skill span { display: inline-block; font: bold .7rem Arial, sans-serif; width: 45px; }
+.skill-logo { display: inline-block; height: 32px; margin-right: 14px; vertical-align: middle; width: 32px; }
+.skill strong { display: inline-block; font-size: 1.7rem; font-weight: normal; width: 34%; }
+.skill small { color: rgba(23, 33, 29, .7); font: .8rem Arial, sans-serif; }
+
+.footer { background: var(--cream); }
+.footer-content { align-items: flex-end; }
+.email { border-bottom: 1px solid var(--green); font-family: Arial, sans-serif; font-size: 1rem; padding-bottom: 12px; }
+.email span { font-size: 1.3rem; margin-left: 25px; }
+.copyright { color: var(--muted); font: .7rem Arial, sans-serif; margin: 90px 0 0; }
+
+/* On small screens, stack the content so it remains easy to read. */
+@media (max-width: 700px) {
+	.site-header { align-items: flex-start; justify-content: flex-end; }
+	nav { text-align: right; }
+	nav a { display: block; margin: 5px 0; }
+	.section { padding: 75px 8%; }
+	.about-content, .skills-content, .footer-content { align-items: flex-start; display: block; }
+	.top-profile { padding: 65px 8% 75px; }
+	.about-copy { width: 100%; }
+	.skill-list { margin-top: 30px; width: 100%; }
+	.skill strong { width: 30%; }
+	.skill small { display: block; margin: 8px 0 0 105px; }
+	.email { display: inline-block; margin-top: 10px; }
+}
